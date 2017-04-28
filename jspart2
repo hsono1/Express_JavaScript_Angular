@@ -1,0 +1,6 @@
+var Person = {
+	
+	name : "Hans"
+
+
+}

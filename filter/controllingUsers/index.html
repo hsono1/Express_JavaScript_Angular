@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Controlling Users</title>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+</head>
+<body ng-controller="myController">
+
+	<fieldset style=" width: 250px">
+
+		<legend>Users Controller</legend>
+
+		<form ng-submit="createUser()">
+			First Name <input style="margin-left: 35px"    type="text" ng-model="fName">
+			Last Name <input style="margin-left: 37px" type="text" ng-model="lName">
+			Fav. Language <input style="margin-left: 12px" type="text" ng-model="language">
+			<button type="submit">Create User</button>
+		</form>
+		
+
+
+
+	</fieldset>
+
+
+
+		<br>
+		<br>
+
+	<table border="1" style="border-collapse: collapse;">
+
+		<thead>
+			
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Fav Language</th>
+			<th>Actions</th>
+
+
+		</thead>
+		
+		<tbody>
+			
+			<tr ng-repeat = "user in users">
+				<td>{{user.fName}}</td>
+				<td>{{user.lName}}</td>
+				<td>{{user.language}}</td>
+				<td><button ng-click="deleteUser(user)">Delete User</button></td>
+			</tr>
+
+
+		</tbody>
+
+
+	</table>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

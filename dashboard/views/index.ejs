@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mongoose Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+
+	<h1>Mongooses: </h1>
+	<% if(animals) { %>
+	<% for( var i in animals) { %>
+		<p>Name : <%= animals[i].name %></p>
+		<p>Age : <%= animals[i].age %></p>
+		<a href="/delete/<%= animals[i]._id %>"  >Delete</a>
+		<hr>
+	<% } %>
+	<% } %>
+
+
+	<h2>Add an Animal:</h2>
+	<form action="/mongoose" method="post">	
+		Name:<input type="text" name="name">
+		Age:<input type="number" name="age">
+		<button type="submit">Add</button>
+	</form>
+
+
+</body>
+</html>
+

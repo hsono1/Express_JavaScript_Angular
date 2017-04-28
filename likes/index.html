@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app= "myApp">
+<head>
+	<title>Popular Languages</title>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+
+
+</head>
+<body ng-controller = "myController">
+
+	 Angular :   Likes {{ angular.likes }}   Dislikes {{ angular.dislikes }}   <button ng-click= "angular.addLike()"   >Like</button> <button ng-click= "angular.addDisLike()">Dislike</button>
+	 <br><br>
+	 Python :   Likes {{ python.likes }}   Dislikes {{ python.dislikes }}   <button ng-click= "python.addLike()">Like</button> <button ng-click="python.addDisLike()">Dislike</button>
+	 <br><br>
+	 JavaScript :   Likes {{ javaScript.likes }}   Dislikes {{ javaScript.dislikes }}   <button ng-click="javaScript.addLike()">Like</button> <button ng-click="javaScript.addDisLike()">Dislike</button>
+	 <br><br>
+
+
+
+	 {{message}}
+
+
+</body>
+</html>
